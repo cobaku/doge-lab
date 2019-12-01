@@ -1,0 +1,58 @@
+<div id="block-info">
+	<div class="property">
+		<span class="point">Value IN:</span>
+		<span class="value">{{block?.valueIn}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Value OUT:</span>
+		<span class="value">{{block?.valueOut}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Previous block hash:</span>
+		<span class="value" (click)="showBlock(block?.previousBlockHash)">{{block?.previousBlockHash}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Next block hash:</span>
+		<span class="value" (click)="showBlock(block?.previousBlockHash)">{{block?.nextBlockHash}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Average coin age:</span>
+		<span class="value">{{block?.averageCoinAge}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Hash:</span>
+		<span class="value">{{block?.hash}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Difficulty:</span>
+		<span class="value">{{block?.difficulty}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Time:</span>
+		<span class="value">{{block?.time | date:'short'}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Confirmations:</span>
+		<span class="value">{{block?.confirmations}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Root:</span>
+		<span class="value">{{block?.merkleRoot}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Versions:</span>
+		<span class="value">{{block?.version}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Height:</span>
+		<span class="value">{{block?.height}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Transactions:</span>
+		<div class="transactions">
+					<span class="value" *ngFor="let r of block?.txs" (click)="showTransaction(r)">
+					{{r}}
+				</span>
+		</div>
+	</div>
+</div>

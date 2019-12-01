@@ -1,0 +1,22 @@
+
+#block-info .property .point {
+	margin-right: 5px;
+	color: #dcdcdc;
+}
+
+#block-info .property .values {
+	margin-left: 15px;
+}
+
+#block-info .property .value {
+	margin-left: 5px;
+	color: #d2dcd6;
+}
+
+#block-info .property .transactions {
+	display: flex;
+	flex-direction: column;
+	height: 200px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}

@@ -25,7 +25,7 @@ public class TransactionDto {
         this.hash = transaction.hash;
         this.confirmations = transaction.confirmations;
         this.size = transaction.size;
-        this.time = transaction.time;
+        this.time = transaction.time * 1000;
         this.fee = transaction.fee;
         this.outputAddress = transaction.outputs.stream()
                 .map(OutputDto::new)

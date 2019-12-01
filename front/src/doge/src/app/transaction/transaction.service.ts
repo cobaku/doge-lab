@@ -12,6 +12,6 @@ export class TransactionService {
 	}
 
 	public getTransaction(id: string): Observable<Transaction> {
-		return this.http.get<Transaction>("http://localhost:8080/chain/block/" + id);
+		return this.http.get<Transaction>("http://localhost:8080/transaction/" + id);
 	}
 }

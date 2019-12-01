@@ -1,1 +1,60 @@
-<mat-card>Block info viewer</mat-card>
+<div id="transaction">
+	<div class="property">
+		<span class="point">Transaction hash:</span>
+		<span class="value">{{transaction?.hash}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Confirmations:</span>
+		<span class="value">{{transaction?.confirmations}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Block hash:</span>
+		<span class="value">{{transaction?.blockHash}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Inputs:</span>
+		<span class="value">{{transaction?.inputsValue}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Outputs:</span>
+		<span class="value">{{transaction?.outputsValue}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Size:</span>
+		<span class="value">{{transaction?.size}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Time:</span>
+		<span class="value">{{transaction?.time | date:'short'}}</span>
+	</div>
+	<div class="property">
+		<span class="point">Outputs:</span>
+		<div *ngFor="let o of transaction?.outputAddress" class="values">
+			<div class="property" (click)="showWallet(o?.address)">
+				<span class="point">Address:</span>
+				<span class="value">{{o?.address}}</span>
+			</div>
+			<div class="property">
+				<span class="point">Value:</span>
+				<span class="value">{{o?.value}}</span>
+			</div>
+		</div>
+	</div>
+	<div class="property">
+		<span class="point">Inputs:</span>
+		<div *ngFor="let i of transaction?.inputAddress" class="values">
+			<div class="property">
+				<span class="point">Signature:</span>
+				<span class="value">{{i?.sig}}</span>
+			</div>
+			<div class="property" (click)="showWallet(i?.address)">
+				<span class="point">Address:</span>
+				<span class="value">{{i?.address}}</span>
+			</div>
+			<div class="property">
+				<span class="point">Value:</span>
+				<span class="value">{{i?.value}}</span>
+			</div>
+		</div>
+	</div>
+</div>

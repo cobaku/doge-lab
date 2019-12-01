@@ -1,0 +1,22 @@
+#transaction {
+
+}
+
+#transaction .property {
+	box-sizing: border-box;
+	padding: 5px;
+}
+
+#transaction .property .point {
+	margin-right: 5px;
+	color: #dcdcdc;
+}
+
+#transaction .property .values {
+	margin-left: 15px;
+}
+
+#transaction .property .value {
+	margin-left: 5px;
+	color: #d2dcd6;
+}

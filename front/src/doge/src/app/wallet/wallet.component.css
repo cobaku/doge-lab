@@ -1,0 +1,14 @@
+#wallet .property {
+	box-sizing: border-box;
+	padding: 5px;
+}
+
+#wallet .property .point {
+	margin-right: 5px;
+	color: #dcdcdc;
+}
+
+#wallet .property .value {
+	margin-left: 5px;
+	color: #d2dcd6;
+}

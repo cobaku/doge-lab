@@ -28,7 +28,7 @@ public class BlockInfoResponseDto {
         this.averageCoinAge = response.block.averageCoinAge;
         this.hash = response.block.hash;
         this.difficulty = response.block.difficulty;
-        this.time = response.block.time;
+        this.time = response.block.time * 1000;
         this.confirmations = response.block.confirmations;
         this.merkleRoot = response.block.merkleroot;
         this.txs = response.block.txs;

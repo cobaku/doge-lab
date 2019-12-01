@@ -5,7 +5,8 @@ import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
 	MatButtonModule,
-	MatCardModule, MatDialogModule,
+	MatCardModule,
+	MatDialogModule,
 	MatDividerModule,
 	MatExpansionModule,
 	MatFormFieldModule,
@@ -18,9 +19,9 @@ import {WalletComponent} from './wallet/wallet.component';
 import {BlockComponent} from './block/block.component';
 import {TransactionComponent} from './transaction/transaction.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {BlockService} from "./block/block.service";
 import {HttpClientModule} from "@angular/common/http";
-import { BlockInfoComponent } from './block/block-info/block-info.component';
+import {BlockInfoComponent} from './block/block-info/block-info.component';
+import {MatDialogRef} from "@angular/material/dialog";
 
 const routes: Routes = [
 	{
@@ -56,7 +57,12 @@ const routes: Routes = [
 		MatInputModule, MatCardModule, MatExpansionModule,
 		MatDividerModule, HttpClientModule, MatDialogModule
 	],
-	providers: [],
+	providers: [
+		{
+			provide: MatDialogRef,
+			useValue: {}
+		}
+	],
 	bootstrap: [AppComponent]
 })
 export class AppModule {
